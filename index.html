@@ -9,6 +9,8 @@
       src="https://kit.fontawesome.com/1cfaa0e0e7.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -16,32 +18,71 @@
       <div class="left-side">
         <form>
           <input type="search" id="city-search" />
-          <button><i class="fa-solid fa-location-crosshairs"></i></button>
         </form>
+        <button id="my-location">
+          <i class="fa-solid fa-location-crosshairs"></i>
+        </button>
         <div class="today-weather">
-          <img class="main-icon" src="./26.png" alt="" />
-          <div>21°C</div>
-          <div>Cloudy</div>
-          <div>Date</div>
-          <div>Helsinki</div>
+          <div class="today-center">
+            <img class="main-icon" id="weather-icon" src="" alt="" />
+            <div id="temp">21°C</div>
+            <div id="desc">Cloudy</div>
+          </div>
+          <div class="today-bottom">
+            <div id="date">Date</div>
+            <div class="title">Helsinki</div>
+          </div>
         </div>
       </div>
       <div class="right-side">
         <div class="forecast-container">
           <div class="c-f">C/F</div>
           <div class="days-forecast">
-            <div class="day">1</div>
-            <div class="day">2</div>
-            <div class="day">3</div>
-            <div class="day">4</div>
-            <div class="day">5</div>
+            <div class="day">
+              <div>Tomorrow</div>
+              <img class="small-icon" src="./26.png" alt="" />
+              <div>20/ 30</div>
+            </div>
+            <div class="day">
+              <div>Tomorrow</div>
+              <img class="small-icon" src="./26.png" alt="" />
+              <div>20/ 30</div>
+            </div>
+            <div class="day">
+              <div>Tomorrow</div>
+              <img class="small-icon" src="./26.png" alt="" />
+              <div>20/ 30</div>
+            </div>
+            <div class="day">
+              <div>Tomorrow</div>
+              <img class="small-icon" src="./26.png" alt="" />
+              <div>20/ 30</div>
+            </div>
+            <div class="day">
+              <div>Tomorrow</div>
+              <img class="small-icon" src="./26.png" alt="" />
+              <div>20/ 30</div>
+            </div>
           </div>
-          <div>Today's Highlights</div>
           <div class="highlights-container">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+            <div class="lol">
+              <div>Wind status</div>
+              <div id="wind-speed">7mph</div>
+              <div><i class="fa-solid fa-location-arrow"></i></div>
+            </div>
+            <div class="lol">
+              <div>Humidity</div>
+              <div id="humidity">0</div>
+              <div class="slider"><span id="slider-persent"></span></div>
+            </div>
+            <div class="lol-1">
+              <div>Visibility</div>
+              <div class="number" id="visibility">6.4 miles</div>
+            </div>
+            <div class="lol-1">
+              <div>Air Pressure</div>
+              <div class="number" id="pressure">0</div>
+            </div>
           </div>
         </div>
       </div>
