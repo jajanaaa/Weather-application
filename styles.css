@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side {
+  background-color: blueviolet;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 8.2vw;
+  gap: 20px;
+}
+
+#city-search {
+  background-image: url(./magnifying-glass-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  width: 100%;
+  border: none;
+}
+
+form {
+  display: flex;
+  height: 30px;
+}
+
+.right-side {
+  background-color: rgb(127, 230, 86);
+  padding: 8.2vw;
+}
+
+.today-weather {
+  background-color: rgb(255, 135, 135);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-icon {
+  width: 200px;
+}
+
+.c-f {
+  display: flex;
+  background-color: aqua;
+  justify-content: flex-end;
+}
+
+.days-forecast {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  flex: 0.4;
+  gap: 20px;
+}
+
+.day {
+  background-color: green;
+  border: 1px solid black;
+  /* width: 120px;
+  height: 140px; */
+}
+
+.forecast-container {
+  background-color: rgb(36, 0, 128);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlights-container div {
+  background-color: pink;
+  border: 1px solid black;
+  /* height: 204px; */
+}
+
+.highlights-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.3fr 1.3fr 1fr 1fr;
+  flex: 1;
+  gap: 20px;
+}
+
+@media (min-width: 767px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  .left-side {
+    width: 30vw;
+    padding: 3.2vw;
+  }
+
+  .right-side {
+    width: 70vw;
+    padding: 3.2vw;
+  }
+
+  .day {
+    flex: 1;
+  }
+
+  .highlights-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.3fr 1fr;
+    flex: 1;
+    gap: 20px;
+  }
+}
