@@ -27,7 +27,7 @@
 
 form {
   display: flex;
-  height: 30px;
+  /* height: 30px; */
 }
 
 .right-side {
