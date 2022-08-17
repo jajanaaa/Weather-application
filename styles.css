@@ -31,11 +31,13 @@
   background-color: #f5f8ff;
 }
 
-form {
+/* form {
   display: flex;
   height: 35px;
+} */
+.search-wrapper {
+  display: flex;
 }
-
 .right-side {
   background-color: #f5f8ff;
   padding: 8.2vw;
@@ -51,20 +53,7 @@ form {
   padding: 20px;
 }
 
-.today-center {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
-}
-.today-bottom {
-  display: flex;
-  flex-direction: column;
-  justify-self: flex-end;
-  align-items: center;
-}
-
-.main-icon {
+#main-icon {
   max-width: 90%;
 }
 
@@ -83,7 +72,7 @@ form {
   margin-bottom: 30px;
 }
 
-.day {
+.days-forecast > div {
   background-color: #ffffff;
   /* border: 1px solid black; */
   /* width: 120px;
@@ -145,8 +134,10 @@ form {
   background-color: aqua;
   width: 100%;
 }
-
-#slider-persent {
+.temp-min {
+  margin-right: 10px;
+}
+#slider-inner {
   position: absolute;
   height: 8px;
   /* width: 50%; */
@@ -169,7 +160,7 @@ form {
     padding: 3.2vw 7vw;
   }
 
-  .day {
+  .days-forecast div {
     flex: 1;
     aspect-ratio: 1/1.4;
   }
@@ -186,4 +177,8 @@ form {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
   }
+}
+
+#button-F {
+  margin-left: 10px;
 }
