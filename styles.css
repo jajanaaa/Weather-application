@@ -23,14 +23,6 @@ body {
   gap: 20px;
 }
 
-.search-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 35px;
-}
-form {
-  border: 2px solid #b8c8e2;
-  border-radius: 50px;
-}
 /* form {
   background-image: url(./magnifying-glass-solid.svg);
   background-repeat: no-repeat;
@@ -42,19 +34,6 @@ form {
 /* border: 2px solid #b8c8e2;
   flex-grow: 1; */
 /* } */
-
-.city-search {
-  background-image: url(./magnifying-glass-solid.svg);
-  background-repeat: no-repeat;
-  background-position: 5% 50%;
-  background-size: 14px;
-  /* border-radius: 50px; */
-  height: 35px;
-  background-color: transparent;
-  /* padding: 5px 10px 5px 30px; */
-  /* border: 2px solid #b8c8e2; */
-  border: none;
-}
 
 .right-side {
   background-color: #f5f8ff;
@@ -98,9 +77,15 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  flex: 0.4;
   gap: 30px;
   margin-bottom: 30px;
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .days-forecast > div {
@@ -112,6 +97,7 @@ form {
   justify-content: space-between;
   border-radius: 22px;
   box-shadow: rgb(222 222 222 / 20%) 0px 8px 24px;
+  height: 100%;
 }
 
 .forecast-container {
@@ -222,20 +208,6 @@ svg {
   color: blue;
 }
 
-#my-location {
-  padding: 8px;
-  background-color: #b8c8e2;
-  border: none;
-  border-radius: 50px;
-  /* border: 2px solid #b8c8e2; */
-  aspect-ratio: 1/1;
-  width: 35px;
-}
-
-.fa-location-crosshairs {
-  color: #ffffff;
-}
-
 #button-C {
   background-color: #ffffff;
   border: none;
@@ -323,4 +295,39 @@ svg {
 .fa-location-dot {
   font-size: 14px;
   margin-right: 5px;
+}
+
+.search-wrapper {
+  display: flex;
+  height: 35px;
+  gap: 10px;
+}
+
+form {
+  flex: 1;
+}
+
+input {
+  background-image: url(./magnifying-glass-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 14px;
+  border-radius: 50px;
+  height: 35px;
+  background-color: transparent;
+  padding: 5px 10px 5px 30px;
+  border: 2px solid #b8c8e2;
+  width: 100%;
+}
+
+#my-location {
+  width: 35px;
+  padding: 8px;
+  background-color: #b8c8e2;
+  border: none;
+  border-radius: 50px;
+}
+
+.fa-location-crosshairs {
+  color: #ffffff;
 }
