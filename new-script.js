@@ -47,7 +47,7 @@ const options = {
   day: "numeric",
   month: "long",
 };
-date.textContent = `Today, ${new Intl.DateTimeFormat("en-GB", options).format(
+date.textContent = `Today ${new Intl.DateTimeFormat("en-GB", options).format(
   now
 )}`;
 

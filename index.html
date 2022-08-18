@@ -18,7 +18,7 @@
       <div class="left-side">
         <div class="search-wrapper">
           <form>
-            <input type="search" />
+            <input type="search" class="city-search" />
           </form>
           <button id="my-location">
             <i class="fa-solid fa-location-crosshairs"></i>
@@ -27,12 +27,15 @@
         <div class="today-weather">
           <div>
             <img id="main-icon" src="" alt="" />
-            <div id="temp"></div>
-            <div id="desc"></div>
+            <h1 id="temp"></h1>
+            <h2 id="desc"></h2>
           </div>
           <div>
             <div id="date"></div>
-            <div id="city-name"></div>
+            <div>
+              <i class="fa-solid fa-location-dot"></i
+              ><span id="city-name"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -43,7 +46,7 @@
             <button id="button-F">F</button>
           </div>
 
-          <div class="days-forecast">
+          <!-- <div class="days-forecast">
             <div>
               <div class="day-name" id="tomorrow"></div>
               <img class="small-icon" src="" alt="" />
@@ -79,25 +82,33 @@
                 <span class="temp-min"></span><span class="temp-max"></span>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="highlights-container">
             <div class="lol">
-              <div>Wind status</div>
+              <div class="highlights-title">Wind status</div>
               <div id="wind-speed"></div>
-              <div><i class="fa-solid fa-location-arrow"></i></div>
+              <span class="fa-stack">
+                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                <i class="fa-solid fa-location-arrow fa-stack-1x"></i>
+              </span>
             </div>
             <div class="lol">
-              <div>Humidity</div>
+              <div class="highlights-title">Humidity</div>
               <div id="humidity"></div>
-              <div class="slider"><span id="slider-inner"></span></div>
+              <div class="slider-wrapper">
+                <div class="slider"><span id="slider-inner"></span></div>
+                <div class="percentages">
+                  <span>0</span><span>50</span><span>100</span>
+                </div>
+              </div>
             </div>
             <div class="lol-1">
-              <div>Visibility</div>
+              <div class="highlights-title">Visibility</div>
               <div class="number" id="visibility"></div>
             </div>
             <div class="lol-1">
-              <div>Air Pressure</div>
+              <div class="highlights-title">Air Pressure</div>
               <div class="number" id="pressure"></div>
             </div>
           </div>
