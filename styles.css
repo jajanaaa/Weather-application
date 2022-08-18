@@ -161,7 +161,7 @@ body {
   /* width: 50%; */
   background-color: #ffd230;
 }
-@media (min-width: 767px) {
+@media (min-width: 1024px) {
   .container {
     width: 100vw;
     height: 100vh;
