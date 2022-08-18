@@ -38,7 +38,13 @@ body {
 
 .right-side {
   background-color: #f5f8ff;
-  padding: 5vw;
+  padding: 8.2vw;
+}
+
+@media (max-width: 375px) {
+  .right-side {
+    padding: 5vw;
+  }
 }
 
 .today-weather {
@@ -80,7 +86,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 5vw;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   overflow-x: auto;
   white-space: nowrap;
   overflow-y: hidden;
@@ -106,6 +112,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
 .small-icon {
@@ -117,9 +124,9 @@ body {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 15px 30px;
+  padding: 10px 30px;
   border-radius: 22px;
   box-shadow: rgb(222 222 222 / 20%) 0px 8px 24px;
 }
@@ -198,41 +205,39 @@ body {
   grid-template-rows: 1fr 1fr 1fr; */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    gap: 30px;
   }
-}
-
-#button-F {
-  margin-left: 10px;
-}
-
-/* .fa-location-crosshairs {
-  font-size: 20px;
-} */
-
-svg {
-  color: blue;
 }
 
 #button-C {
   background-color: #ffffff;
+  color: #91b4ff;
+  /* background-color: #ffffff; */
   border: none;
-  padding: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50px;
+  font-weight: 600;
 }
 /* <button id="button-F"> */
 
 #button-F {
-  background-color: #6899ff;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #91b4ff;
+  /* background-color: #6899ff; */
+  /* color: #ffffff; */
   border: none;
-  padding: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50px;
+  margin-left: 8px;
+  font-weight: 600;
 }
 
+.active {
+  background-color: #91b4ff !important;
+  color: #ffffff !important;
+}
 .c-f {
   color: #ffffff;
 }
@@ -359,4 +364,10 @@ input[type="search"]::-webkit-search-cancel-button {
 .city-container {
   display: flex;
   align-items: center;
+}
+
+.days-forecast > div > div:last-child {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }

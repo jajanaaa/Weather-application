@@ -38,6 +38,8 @@ function showCityTemperature(response) {
   getForecast(response.data.coord);
   buttonF.disabled = false;
   buttonC.disabled = true;
+  buttonF.classList.add("active");
+  buttonC.classList.remove("active");
 }
 // DATE API
 let date = document.querySelector("#date");
@@ -127,6 +129,8 @@ buttonF.addEventListener("click", function () {
   }
   buttonF.disabled = true;
   buttonC.disabled = false;
+  buttonF.classList.toggle("active");
+  buttonC.classList.toggle("active");
 });
 
 // CONVERT BACK TO CELSIUS
@@ -140,4 +144,9 @@ buttonC.addEventListener("click", function () {
   }
   buttonF.disabled = false;
   buttonC.disabled = true;
+  // buttonF.classList.toggle("active");
+  // buttonC.classList.remove("active");
+  // buttonC.classList.add("disabled");
+  buttonF.classList.toggle("active");
+  buttonC.classList.toggle("active");
 });
