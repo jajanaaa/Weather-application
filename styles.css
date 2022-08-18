@@ -8,6 +8,7 @@
 }
 body {
   color: rgb(77, 77, 77);
+  font-size: 18px;
 }
 .container {
   display: flex;
@@ -37,7 +38,7 @@ body {
 
 .right-side {
   background-color: #f5f8ff;
-  padding: 8.2vw;
+  padding: 5vw;
 }
 
 .today-weather {
@@ -58,6 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 #temp {
   font-weight: 700;
@@ -77,7 +79,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 30px;
+  gap: 5vw;
   margin-bottom: 30px;
   overflow-x: auto;
   white-space: nowrap;
@@ -171,6 +173,7 @@ body {
   .left-side {
     width: 25vw;
     padding: 2vw;
+    height: 100vh;
   }
 
   .right-side {
@@ -181,7 +184,9 @@ body {
   /* .days-forecast div {
     flex: 1;
   } */
-
+  .today-weather {
+    height: 100vh;
+  }
   .highlights-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -287,19 +292,23 @@ svg {
   font-weight: 500;
 }
 
-#date,
+/* #date,
 #city-name {
   font-size: 0.9em;
-}
+} */
 
+#city-name {
+  font-weight: 500;
+  font-size: 1.5em;
+}
 .fa-location-dot {
-  font-size: 14px;
+  font-size: 20px;
   margin-right: 5px;
 }
 
 .search-wrapper {
   display: flex;
-  height: 35px;
+  height: 40px;
   gap: 10px;
 }
 
@@ -313,7 +322,7 @@ input {
   background-position: 5% 50%;
   background-size: 14px;
   border-radius: 50px;
-  height: 35px;
+  height: 40px;
   background-color: transparent;
   padding: 5px 10px 5px 30px;
   border: 2px solid #b8c8e2;
@@ -321,7 +330,7 @@ input {
 }
 
 #my-location {
-  width: 35px;
+  width: 40px;
   padding: 8px;
   background-color: #b8c8e2;
   border: none;
@@ -330,4 +339,24 @@ input {
 
 .fa-location-crosshairs {
   color: #ffffff;
+}
+
+input:focus {
+  outline: 2px solid #ffd230;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  /* Remove default */
+  -webkit-appearance: none;
+
+  /* Now your own custom styles */
+  height: 10px;
+  width: 10px;
+  background-image: url(./xmark-solid.svg);
+  background-repeat: no-repeat;
+  /* Will place small red box on the right of input (positioning carries over) */
+}
+.city-container {
+  display: flex;
+  align-items: center;
 }

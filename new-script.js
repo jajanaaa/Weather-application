@@ -47,9 +47,7 @@ const options = {
   day: "numeric",
   month: "long",
 };
-date.textContent = `Today ${new Intl.DateTimeFormat("en-GB", options).format(
-  now
-)}`;
+date.textContent = `${new Intl.DateTimeFormat("en-GB", options).format(now)}`;
 
 // SEARCH CITY BY INPUT
 const form = document.querySelector("form");
