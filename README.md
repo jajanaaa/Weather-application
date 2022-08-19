@@ -38,4 +38,4 @@ This is my portfolio project - Weather App. The purpose of this project was to p
 - HTML
 
 ### What I learned
-I have learned to make API calls and manipulate the received data; add values to arrays and loop through them. I also learned how to get the current location of a user. I practiced updating UI through JS and using flexbox and grid. 
+I have learned to make API calls and manipulate the received data; add values to arrays and loop through them. I also learned how to get the current location of a user. I practiced updating UI through JavaScript; using Flexbox and Grid. 
