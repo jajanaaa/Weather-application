@@ -17,7 +17,6 @@ body {
 
 .left-side {
   background-color: rgb(255, 255, 255);
-  height: 90vh;
   display: flex;
   flex-direction: column;
   padding: 8.2vw;
@@ -58,6 +57,7 @@ body {
   padding: 20px;
   border-radius: 22px;
   color: white;
+  aspect-ratio: 1/2;
   box-shadow: rgb(222 222 222 / 20%) 0px 8px 24px;
 }
 
@@ -78,7 +78,6 @@ body {
 .c-f {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 20px;
 }
 
 .days-forecast {
@@ -126,7 +125,8 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 10px 30px;
+  padding: 20px 30px;
+  gap: 20px;
   border-radius: 22px;
   box-shadow: rgb(222 222 222 / 20%) 0px 8px 24px;
 }
@@ -149,7 +149,7 @@ body {
 .highlights-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.3fr 1.3fr 1fr 1fr;
+  grid-template-rows: 1.4fr 1.4fr 1fr 1fr;
   flex: 1;
   gap: 30px;
 }
@@ -180,7 +180,6 @@ body {
   .left-side {
     width: 25vw;
     padding: 2vw;
-    height: 100vh;
   }
 
   .right-side {
@@ -207,23 +206,31 @@ body {
     grid-template-rows: 1fr;
     gap: 30px;
   }
+  .lol {
+    padding: 10px 30px;
+    gap: 0;
+  }
 }
-
 #button-C {
   background-color: #ffffff;
-  color: #91b4ff;
+  color: rgb(161, 161, 161);
   /* background-color: #ffffff; */
   border: none;
   width: 30px;
   height: 30px;
   border-radius: 50px;
   font-weight: 600;
+  border: 1px solid rgb(161, 161, 161);
+  opacity: 0.5;
+  box-shadow: rgb(222 222 222 / 20%) 0px 8px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 /* <button id="button-F"> */
 
 #button-F {
   background-color: #ffffff;
-  color: #91b4ff;
+  color: rgb(161, 161, 161);
   /* background-color: #6899ff; */
   /* color: #ffffff; */
   border: none;
@@ -232,11 +239,21 @@ body {
   border-radius: 50px;
   margin-left: 8px;
   font-weight: 600;
+  border: 1px solid rgb(161, 161, 161);
+  opacity: 0.5;
+  box-shadow: rgb(222 222 222 / 20%) 0px 8px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .active {
   background-color: #91b4ff !important;
   color: #ffffff !important;
+  opacity: 1 !important;
+  border: 1px solid #91b4ff !important;
+}
+.active:hover {
+  background-color: #6899ff !important;
 }
 .c-f {
   color: #ffffff;
@@ -272,7 +289,7 @@ body {
 }
 
 .fa-stack {
-  font-size: 12px;
+  font-size: 14px;
 }
 .fa-circle {
   color: #91b4ff;
@@ -329,7 +346,7 @@ input {
   border-radius: 50px;
   height: 40px;
   background-color: transparent;
-  padding: 5px 10px 5px 30px;
+  padding: 0 2% 0 13%;
   border: 2px solid #b8c8e2;
   width: 100%;
 }
@@ -337,9 +354,15 @@ input {
 #my-location {
   width: 40px;
   padding: 8px;
-  background-color: #b8c8e2;
+  background-color: #91b4ff;
   border: none;
   border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#my-location:hover {
+  background-color: #6899ff;
 }
 
 .fa-location-crosshairs {
@@ -370,4 +393,23 @@ input[type="search"]::-webkit-search-cancel-button {
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+input::placeholder {
+  color: #b8c8e2;
+}
+
+.forecast-top-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 1023px) and (max-width: 1439px) {
+  .forecast-top-container {
+    gap: 10px;
+  }
+  #city-name {
+    font-size: 1em;
+  }
 }
