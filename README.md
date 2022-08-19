@@ -22,17 +22,19 @@ This is my portfolio project - Weather App. The purpose of this project was to p
 ### Built with
 - Weather API
 - Geolocation API
-- JavaScript (
-- Intl.DateTimeFormat()
-- querySelector()
-- Math.round()
-- innerHTML
-- classList.add()
-- addEventListener();
-- For loop
-- .slice()
-- .push();
-- CSS (Flexbox, Grid)
+- JavaScript
+  - Intl.DateTimeFormat()
+  - for loop
+  - slice()
+  - push()
+  - querySelector()
+  - Math.round()
+  - innerHTML
+  - classList.add()
+  - addEventListener()
+- CSS 
+  - Flexbox 
+  - Grid
 - HTML
 
 ### What I learned
