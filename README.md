@@ -11,7 +11,7 @@
 
 ### Screenshot
 
-![Screenshot](icons/screenshot.png)
+![Screenshot](icons/screenshot.jpg)
 
 ### Links
 
