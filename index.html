@@ -4,20 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icons/favicon.png"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/1cfaa0e0e7.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="new-script.js"></script>
+    <script defer src="script.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="left-side">
-        <div class="search-wrapper">
+        <div class="search-container">
           <form>
             <input type="search" placeholder="Search cities..." />
           </form>
@@ -27,7 +32,7 @@
         </div>
         <div class="today-weather">
           <div>
-            <img id="main-icon" src="" alt="" />
+            <img id="main-icon" />
             <h1 id="temp"></h1>
             <h2 id="desc"></h2>
           </div>
@@ -47,39 +52,38 @@
               <button id="button-C" disabled>C</button>
               <button id="button-F" class="active">F</button>
             </div>
-
             <div class="days-forecast">
               <div>
                 <div class="day-name" id="tomorrow"></div>
-                <img class="small-icon" src="" alt="" />
+                <img class="small-icon" />
                 <div>
                   <span class="temp-min"></span><span class="temp-max"></span>
                 </div>
               </div>
               <div>
                 <div class="day-name"></div>
-                <img class="small-icon" src="" alt="" />
+                <img class="small-icon" />
                 <div>
                   <span class="temp-min"></span><span class="temp-max"></span>
                 </div>
               </div>
               <div>
                 <div class="day-name"></div>
-                <img class="small-icon" src="" alt="" />
+                <img class="small-icon" />
                 <div>
                   <span class="temp-min"></span><span class="temp-max"></span>
                 </div>
               </div>
               <div>
                 <div class="day-name"></div>
-                <img class="small-icon" src="" alt="" />
+                <img class="small-icon" />
                 <div>
                   <span class="temp-min"></span><span class="temp-max"></span>
                 </div>
               </div>
               <div>
                 <div class="day-name"></div>
-                <img class="small-icon" src="" alt="" />
+                <img class="small-icon" />
                 <div>
                   <span class="temp-min"></span><span class="temp-max"></span>
                 </div>
@@ -87,17 +91,17 @@
             </div>
           </div>
           <div class="highlights-container">
-            <div class="lol">
+            <div class="highlights-top">
               <div class="highlights-title">Wind status</div>
-              <div id="wind-speed"></div>
+              <div id="wind-speed" class="value"></div>
               <span class="fa-stack">
                 <i class="fa-solid fa-circle fa-stack-2x"></i>
                 <i class="fa-solid fa-location-arrow fa-stack-1x"></i>
               </span>
             </div>
-            <div class="lol">
+            <div class="highlights-top">
               <div class="highlights-title">Humidity</div>
-              <div id="humidity"></div>
+              <div id="humidity" class="value"></div>
               <div class="slider-wrapper">
                 <div class="slider"><span id="slider-inner"></span></div>
                 <div class="percentages">
@@ -105,13 +109,13 @@
                 </div>
               </div>
             </div>
-            <div class="lol-1">
+            <div class="highlights-bottom">
               <div class="highlights-title">Visibility</div>
-              <div class="number" id="visibility"></div>
+              <div id="visibility" class="value"></div>
             </div>
-            <div class="lol-1">
+            <div class="highlights-bottom">
               <div class="highlights-title">Air Pressure</div>
-              <div class="number" id="pressure"></div>
+              <div id="pressure" class="value"></div>
             </div>
           </div>
         </div>
